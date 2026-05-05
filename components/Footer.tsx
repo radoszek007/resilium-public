@@ -14,7 +14,7 @@ export function Footer() {
       <div className="section-shell">
         <div className="grid gap-10 border-b border-white/[0.12] pb-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-end gap-2.5">
               <span className="relative block h-12 w-[132px] shrink-0">
                 <Image
                   src="/logo-resilium-cele-square.png"
@@ -24,12 +24,12 @@ export function Footer() {
                   className="object-contain"
                 />
               </span>
-              <span className="rounded-full border border-resilium-orange/35 bg-resilium-orange/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.22em] text-resilium-orange">
-                Public
+              <span className="pb-2 text-[10px] font-extrabold uppercase tracking-[0.3em] text-resilium-orange/90">
+                PUBLIC
               </span>
             </div>
             <p className="mt-4 max-w-md leading-7 text-white/[0.66]">
-              Systém trénovaných reakcí pro každodenní život.
+              Systém trénovaných reakcí.
             </p>
           </div>
           <nav className="flex flex-col gap-3">

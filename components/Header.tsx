@@ -18,19 +18,19 @@ export function Header() {
   return (
     <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#2F3B4E]/[0.88] text-white backdrop-blur-xl">
       <div className="section-shell flex h-20 items-center justify-between">
-        <a href="#top" className="flex items-center gap-3" aria-label="Resilium Public">
-          <span className="relative block h-11 w-[118px] shrink-0">
+        <a href="#top" className="flex items-end gap-2.5" aria-label="Resilium Public">
+          <span className="relative block h-10 w-[108px] shrink-0">
             <Image
               src="/logo-resilium-cele-square.png"
               alt="Resilium"
               fill
-              sizes="118px"
+              sizes="108px"
               className="object-contain"
               priority
             />
           </span>
-          <span className="rounded-full border border-resilium-orange/35 bg-resilium-orange/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.22em] text-resilium-orange">
-            Public
+          <span className="pb-1.5 text-[10px] font-extrabold uppercase tracking-[0.28em] text-resilium-orange/90">
+            PUBLIC
           </span>
         </a>
 
