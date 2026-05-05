@@ -1,0 +1,101 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+
+const navItems = [
+  { label: "Přínosy", href: "#prinosy" },
+  { label: "Jak to funguje", href: "#jak-to-funguje" },
+  { label: "Programy", href: "#programy" },
+  { label: "Pro koho", href: "#pro-koho" },
+  { label: "Otázky", href: "#faq" },
+  { label: "Poptávka", href: "#poptavka" }
+];
+
+export function Header() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#2F3B4E]/[0.88] text-white backdrop-blur-xl">
+      <div className="section-shell flex h-20 items-center justify-between">
+        <a href="#top" className="flex items-center gap-3" aria-label="Resilium Public">
+          <span className="relative block h-11 w-[118px] shrink-0">
+            <Image
+              src="/logo-resilium-cele-square.png"
+              alt="Resilium"
+              fill
+              sizes="118px"
+              className="object-contain"
+              priority
+            />
+          </span>
+          <span className="rounded-full border border-resilium-orange/35 bg-resilium-orange/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.22em] text-resilium-orange">
+            Public
+          </span>
+        </a>
+
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Hlavní navigace">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="text-sm font-semibold text-white/[0.76] transition hover:text-white"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <a href="#poptavka" className="btn-primary hidden lg:inline-flex">
+          Chci začít
+        </a>
+
+        <button
+          type="button"
+          aria-label="Otevřít menu"
+          aria-expanded={open}
+          onClick={() => setOpen((value) => !value)}
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-white/[0.16] bg-white/[0.08] lg:hidden"
+        >
+          <span className="relative h-4 w-5">
+            <span
+              className={`absolute left-0 top-0 h-0.5 w-5 bg-white transition ${
+                open ? "translate-y-[7px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-[7px] h-0.5 w-5 bg-white transition ${
+                open ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-[14px] h-0.5 w-5 bg-white transition ${
+                open ? "-translate-y-[7px] -rotate-45" : ""
+              }`}
+            />
+          </span>
+        </button>
+      </div>
+
+      {open ? (
+        <div className="border-t border-white/10 bg-[#2F3B4E] px-5 py-5 lg:hidden">
+          <nav className="mx-auto flex max-w-[1240px] flex-col gap-1" aria-label="Mobilní navigace">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="rounded-2xl px-4 py-3 text-sm font-bold text-white/[0.82] hover:bg-white/[0.08]"
+              >
+                {item.label}
+              </a>
+            ))}
+            <a href="#poptavka" onClick={() => setOpen(false)} className="btn-primary mt-3 w-full">
+              Chci začít
+            </a>
+          </nav>
+        </div>
+      ) : null}
+    </header>
+  );
+}
