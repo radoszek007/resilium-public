@@ -104,16 +104,16 @@ export function BenefitsSection() {
           {items.map((item) => (
             <article
               key={item.title}
-              className="group relative flex min-h-[250px] flex-col rounded-[26px] border border-[#D9DEE8] bg-resilium-light p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-resilium-orange/35 hover:bg-white hover:shadow-soft"
+              className="group relative flex min-h-[250px] flex-col rounded-[26px] border border-resilium-border bg-resilium-light p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-resilium-orange/35 hover:bg-white hover:shadow-soft"
             >
               <div className="mb-7 flex items-center justify-between">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-resilium-orange/20 bg-white text-resilium-orange shadow-sm transition group-hover:border-resilium-orange/35 group-hover:bg-resilium-orange group-hover:text-white">
                   <TrainingIcon type={item.icon} />
                 </div>
-                <span className="h-px w-16 bg-[#D9DEE8] transition group-hover:bg-resilium-orange/45" />
+                <span className="h-px w-16 bg-resilium-border transition group-hover:bg-resilium-orange/45" />
               </div>
               <h3 className="text-xl font-black text-resilium-ink">{item.title}</h3>
-              <p className="mt-4 leading-7 text-resilium-muted">{item.text}</p>
+              <p className="mt-4 leading-7 text-resilium-body">{item.text}</p>
             </article>
           ))}
         </div>

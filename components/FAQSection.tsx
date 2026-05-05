@@ -23,7 +23,7 @@ export function FAQSection() {
           {faqs.map(([question, answer], index) => {
             const open = openIndex === index;
             return (
-              <div key={question} className="rounded-[24px] border border-[#D9DEE8] bg-white">
+              <div key={question} className="rounded-[24px] border border-resilium-border bg-white">
                 <button
                   type="button"
                   onClick={() => setOpenIndex(open ? -1 : index)}
@@ -34,7 +34,7 @@ export function FAQSection() {
                     {open ? "-" : "+"}
                   </span>
                 </button>
-                {open ? <p className="px-6 pb-6 leading-8 text-resilium-muted">{answer}</p> : null}
+                {open ? <p className="px-6 pb-6 leading-8 text-resilium-body">{answer}</p> : null}
               </div>
             );
           })}

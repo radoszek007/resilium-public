@@ -16,7 +16,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#2F3B4E]/[0.88] text-white backdrop-blur-xl">
+    <header className="fixed left-0 top-0 z-50 w-full border-b border-white/[0.16] bg-[rgba(79,107,126,0.65)] text-[#F5F7FA] backdrop-blur-xl">
       <div className="section-shell flex h-20 items-center justify-between">
         <a href="#top" className="flex items-end gap-2.5" aria-label="Resilium Public">
           <span className="relative block h-10 w-[108px] shrink-0">
@@ -39,7 +39,7 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-semibold text-white/[0.76] transition hover:text-white"
+              className="text-sm font-semibold text-[#EAF0F5]/85 transition hover:text-white"
             >
               {item.label}
             </a>
@@ -78,14 +78,14 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-white/10 bg-[#2F3B4E] px-5 py-5 lg:hidden">
+        <div className="border-t border-white/[0.16] bg-[rgba(79,107,126,0.92)] px-5 py-5 lg:hidden">
           <nav className="mx-auto flex max-w-[1240px] flex-col gap-1" aria-label="Mobilní navigace">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-2xl px-4 py-3 text-sm font-bold text-white/[0.82] hover:bg-white/[0.08]"
+                className="rounded-2xl px-4 py-3 text-sm font-bold text-[#EAF0F5]/90 hover:bg-white/[0.08]"
               >
                 {item.label}
               </a>

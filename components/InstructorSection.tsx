@@ -28,7 +28,7 @@ export function InstructorSection() {
         </div>
         <div>
           <SectionHeading title="Kdo za Resiliem stojí" />
-          <div className="mt-8 space-y-6 text-base leading-8 text-resilium-muted">
+          <div className="mt-8 space-y-6 text-base leading-8 text-resilium-body">
             <p>
               Resilium vytvořil Radim Končítek, odborník na osobní bezpečnost,
               psychofyzickou odolnost a krizovou komunikaci. Ve své práci propojuje dlouholetou

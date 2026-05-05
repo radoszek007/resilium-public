@@ -38,7 +38,7 @@ export function SectionHeading({
       {description ? (
         <p
           className={`mt-5 text-base leading-8 sm:text-lg ${
-            dark ? "text-white/75" : "text-resilium-muted"
+            dark ? "text-white/75" : "text-resilium-body"
           }`}
         >
           {description}

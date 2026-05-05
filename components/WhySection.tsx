@@ -24,7 +24,7 @@ export function WhySection() {
     <section id="prinosy" className="bg-resilium-light py-24 sm:py-32">
       <div className="section-shell">
         <SectionHeading title="V životě nerozhoduje jen to, co víte. Rozhoduje, k čemu máte přístup pod tlakem." />
-        <div className="mt-8 grid gap-8 text-base leading-8 text-resilium-muted lg:grid-cols-2">
+        <div className="mt-8 grid gap-8 text-base leading-8 text-resilium-body lg:grid-cols-2">
           <p>
             V běžném klidu většina lidí ví, co by měli dělat. Dýchat, mluvit rozumně,
             rozhodnout se, nevybouchnout, neustoupit ze svých hranic, dokončit důležitou věc.
@@ -38,10 +38,10 @@ export function WhySection() {
         </div>
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {cards.map((card) => (
-            <article key={card.title} className="rounded-[28px] border border-[#D9DEE8] bg-white p-7 shadow-soft">
+            <article key={card.title} className="rounded-[28px] border border-resilium-border bg-white p-7 shadow-soft">
               <Icon>{card.icon}</Icon>
               <h3 className="mt-8 text-xl font-black text-resilium-ink">{card.title}</h3>
-              <p className="mt-4 leading-7 text-resilium-muted">{card.text}</p>
+              <p className="mt-4 leading-7 text-resilium-body">{card.text}</p>
             </article>
           ))}
         </div>
